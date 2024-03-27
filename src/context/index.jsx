@@ -20,6 +20,7 @@ export default function GlobalState({ children }) {
         `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${searchQuery}&with_genres=${genre}`
       );
       setSearchResults(response.data.results);
+      setSearchQuery("")
     } catch (error) {
       console.log(error);
     }
